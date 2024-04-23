@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+.main-div{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.main-div h1{
+    color: #0dcaf0;
+    font-size: 3rem;
+    font-weight: 900;
+    position: absolute;
+    top: 32%;
+    left:28%;
+}
+.main-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

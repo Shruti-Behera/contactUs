@@ -1,0 +1,30 @@
+.stay-in-touch button{
+    background-color: #0d6efd;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+.stay-in-touch input{
+    border: none;
+    outline: none;
+}
+.stay-in-touch .subscribe{
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+.footer-container{
+    margin-top: 4rem;
+    background-color: #f0ffff;
+    padding: 40px 13px;
+    height: 12.5rem;
+}
+.footer-container div h6{
+    font-weight: 600;
+}
+.Footer-icon-menu{
+    width: 1.8rem;
+}
+.footer-container .inquiry p{
+    margin-bottom: 0;
+}

@@ -1,0 +1,86 @@
+.main-container{
+    margin-top: 0.3rem;
+}
+.main-container h1{
+    font-weight: 700;
+    color: #0dcaf0;
+    margin-top: 3.5rem;
+}
+.left-col{
+    border-radius: 0.6rem;
+    color: #fff;
+    background-color:#0dcaf0;
+    height: 25.6rem;
+}
+.contact-information h4{
+    font-weight: 900;
+    margin-top: 0.5rem;  
+}
+.contact-information{
+    padding: 15px 0px 10px 20px;
+    color: #fff;
+}
+
+.right-row .right-col input{
+    margin-top: 0px;
+}
+.right-row input{
+    width: 90%;
+}
+.right-col{
+    border: 1px solid #0dcaf0;
+    border-left: none;
+    border-radius: 10px; 
+    padding: 15px 10px;
+    height: 410px;
+    padding-left: 2.1rem;
+}
+.right-col input{
+    border:none;
+    border-bottom:2px solid #0dcaf0;
+    outline: none;
+    margin-bottom: 0.75rem;
+}
+.need-help-row .radiobox-col {
+    font-size: 0.9rem;  
+}
+.need-help-row .radiobox-col input{
+    margin-right: 0.5rem;
+}
+.message input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #0dcaf0;
+    margin-top: 0.12px;
+    margin-bottom: 0.6rem;
+}
+.message{
+    margin-top: 0.2rem;
+}
+.message label{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.icon-menu{
+    border: 1px solid black;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #0dcaf0;
+    margin: 0.6rem;
+    padding-top: 0.5rem;
+}
+.icon-row{
+    margin-left: 1.56rem;
+    margin-top:4.65rem;
+}
+.need-help-row h6{
+    font-size: 1rem;
+    font-weight: 600;
+}
+button{
+    background-color: #0dcaf0 !important;
+    border: none !important;
+}
