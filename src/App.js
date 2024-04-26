@@ -7,6 +7,7 @@ import Footer from './component/Footer/Footer';
 import CrudFrorm from './component/CrudForm/CrudFrorm';
 import CounterFile from './component/CounterFile/CounterFile';
 import CardDataShow from './component/CardDataShow/CardDataShow';
+import ApiIntegration from './component/ApiIntegration/ApiIntegration';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/counter' element={<CounterFile/>}/>
         <Route path='/cardData' element={<CardDataShow/>}/>
       </Routes>
+      <ApiIntegration/>
       <Footer/>
     </BrowserRouter>
   

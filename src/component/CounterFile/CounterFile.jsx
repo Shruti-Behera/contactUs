@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Container ,Row,Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+
 const CounterFile = () => {
   const [count, setCount] = useState(0);
   const [isPaused, setIsPaused] = useState(true);
   const [pausedAt, setPausedAt] = useState(null);
-  const [currentCount, setCurrentCount] = useState(10);
-
 
   useEffect(() => {
     let interval;
@@ -15,18 +14,13 @@ const CounterFile = () => {
           setCount(prevCount => prevCount + 1);
         }
       }, 50);
-    } else {
-      if (pausedAt !== null) {
-        interval = setInterval(() => {
-          setCurrentCount(prevCount => Math.max(0, prevCount - 1));
-        }, 50);
-      }
+    } else if (pausedAt !== null) {
+      interval = setInterval(() => {
+        setCount(prevCount => Math.max(0, prevCount - 1));
+      }, 50);
     }
-  
     return () => clearInterval(interval);
-  
   }, [count, isPaused, pausedAt]);
-  
 
   const handleStart = () => {
     setIsPaused(false);
@@ -39,23 +33,20 @@ const CounterFile = () => {
   };
 
   const displayCount = useMemo(() => {
-    if (pausedAt !== null && isPaused) {
-      return pausedAt;
-    }
-    return count;
-  }, [count, isPaused, pausedAt]);
+    return count; 
+  }, [count]);
 
   return (
     <Container>
-    <Row>
+      <Row>
         <Col md={12} className='text-center'>Counter: {displayCount}</Col>
         <Col md={12} className='text-center'>
-        <button onClick={handleStart} disabled={!isPaused}>Start</button>
+          <button onClick={handleStart} disabled={!isPaused}>Start</button>
         </Col>
         <Col md={12} className='text-center'>
-        <button onClick={handlePause} disabled={isPaused}>Pause</button>
+          <button onClick={handlePause} disabled={isPaused}>Pause</button>
         </Col>
-    </Row>
+      </Row>
     </Container>
   );
 };
