@@ -35,18 +35,18 @@ const EditForm = ({ data, onDelete, onEdit }) => {
             <Form onSubmit={handleUpdate}>
               <Form.Group controlId={`name-${item.id}`}>
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} />
+                <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} className='mb-2' />
               </Form.Group>
               <Form.Group controlId={`email-${item.id}`}>
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" value={formData.email} onChange={handleChange} />
+                <Form.Control type="email" name="email" value={formData.email} onChange={handleChange}className='mb-2' />
               </Form.Group>
               <Form.Group controlId={`contact-${item.id}`}>
                 <Form.Label>Contact</Form.Label>
-                <Form.Control type="text" name="contact" value={formData.contact} onChange={handleChange} />
+                <Form.Control type="text" name="contact" value={formData.contact} onChange={handleChange} className='mb-2'/>
               </Form.Group>
-              <Button variant="success" type="submit" className='mx-2'>Save</Button>
-              <Button variant="danger" onClick={() => setSelectedItemId(null)}>Cancel</Button>
+              <Button variant="success" type="submit" className='mx-2 mt-2'>Save</Button>
+              <Button variant="danger" onClick={() => setSelectedItemId(null)} className='mt-2'>Cancel</Button>
             </Form>
           ) : (
             <>

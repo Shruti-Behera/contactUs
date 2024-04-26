@@ -9,7 +9,6 @@ import EditForm from '../EditForm/EditForm'
 
 const CrudFrorm = () => {
     const [data, setData] = useState([]);
-
     const handleCreate = (newData) => {
         setData([...data, newData]);
       };
