@@ -5,11 +5,11 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const ApiIntegration = () => {
   const [myData, setMyData] = useState([]);
   const [error, setError] = useState("");
-
   const getApiData = async () => {
     try {
       const res = await axios.get(
@@ -28,7 +28,9 @@ const ApiIntegration = () => {
 
   return (
     <>
-    <h1 className="text-center" variant='h6'>PRODUCT LIST</h1>
+      <h1 className="text-center" variant="h6">
+        PRODUCT LIST
+      </h1>
       {error && <p>{error}</p>}
       <Container maxWidth="lg" sx={{ marginTop: "30px" }}>
         <Grid container spacing={3}>
@@ -43,12 +45,11 @@ const ApiIntegration = () => {
               >
                 {item.product_id && item.product_id.productImage && (
                   <img
-                    src={item.product_id.productImage[0]} 
+                    src={item.product_id.productImage[0]}
                     alt="Product"
                     style={{
                       width: "100%",
                       marginBottom: "20px",
-                      
                       objectFit: "cover",
                       height: "250px",
                     }}
@@ -68,7 +69,6 @@ const ApiIntegration = () => {
                       {item.product_id
                         ? item.product_id.name
                         : "Product Name Unavailable"}{" "}
-          
                     </Typography>
                     <Typography
                       variant="body1"
@@ -77,17 +77,33 @@ const ApiIntegration = () => {
                     >
                       Price:{" "}
                       {item.price
-                        ? `$${item.price.$numberDecimal}`
+                        ? ` ₹${item.price.$numberDecimal}`
                         : "Price Unavailable"}
                     </Typography>
                     <Typography variant="body1" gutterBottom>
-                      Discount: {item.discount ? `${item.discount.$numberDecimal}%` : "Discount Unavailable"}
+                      Discount:{" "}
+                      {item.discount
+                        ? `${item.discount.$numberDecimal}%`
+                        : "Discount Unavailable"}
                     </Typography>
                     <Typography variant="body1" gutterBottom>
-                      MRP: {item.mrp ? `$${item.mrp.$numberDecimal}` : "MRP Unavailable"}
+                      MRP:{" "}
+                      {item.mrp
+                        ? ` ₹${item.mrp.$numberDecimal}`
+                        : "MRP Unavailable"}
                     </Typography>
                   </div>
-                  <Button size="big" style={{ alignSelf: "center;",marginTop: "10px"  }}  variant="contained" fullWidth>
+                  <Button
+                    component={Link}
+                    to={{
+                      pathname: `/productDetail/${item._id}`,
+                      state: { product: item }
+                    }}
+                    size="big"
+                    style={{ alignSelf: "center;", marginTop: "10px" }}
+                    variant="contained"
+                    fullWidth
+                  >
                     View
                   </Button>
                 </div>

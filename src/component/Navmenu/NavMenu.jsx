@@ -15,8 +15,9 @@ const NavMenu = () => {
             </Nav.Link>
             <Nav.Link href='/crudForm/*'>CrudForm</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
-            <Nav.Link href="/Counter">CounterFile</Nav.Link>
-            <Nav.Link href="/cardData">CardDataView</Nav.Link>
+            <Nav.Link href="/Counter">Counter</Nav.Link>
+            <Nav.Link href="/cardData">CardData</Nav.Link>
+            <Nav.Link href="/product">ProductList</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
